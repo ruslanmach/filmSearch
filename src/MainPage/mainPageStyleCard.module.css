@@ -1,0 +1,100 @@
+.moviesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px; /* Збільшуємо відступи між картками */
+    justify-content: center;
+}
+
+
+
+/* Основне зображення */
+.movieCard img {
+    width: 100%;
+    border-radius: 12px;
+    display: block;
+}
+
+/* Динамічне світіння, залежно від кольору постера */
+.movieCard::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: calc(100% + 40px);
+    height: calc(100% + 40px);
+    border-radius: 20px;
+    background: radial-gradient(circle, var(--glow-color, rgba(255, 69, 0, 0.5)), rgba(0, 0, 0, 0.2));
+    filter: blur(25px);
+    z-index: -1;
+    transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+/* Посилене світіння при наведенні */
+.movieCard:hover::before {
+    opacity: 1;
+    filter: blur(35px);
+}
+
+.movieCard h3 {
+    text-align: center;
+}
+
+.movieCard h3 a {
+    color: white !important; /* Білий колір */
+    font-size: 18px;
+    text-decoration: underline !important; /* Підкреслення */
+    transition: color 0.3s ease;
+}
+
+.movieCard h3 a:hover {
+    color: #ff4500; /* При наведенні змінюється колір */
+}
+
+/* Додана фіксація кнопки "+", щоб вона була завжди прижата до низу */
+/* Фіксація кнопки "+", щоб вона була завжди прижата до низу */
+.movieCard {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 220px;
+}
+
+/* Основне зображення */
+.movieCard img {
+    width: 100%;
+    border-radius: 12px;
+    display: block;
+}
+
+/* Фіксація кнопки "+", щоб вона була на всю ширину */
+.movieCard button {
+    position: absolute;
+    bottom: 0; /* Прижимаємо до нижнього краю */
+    left: 0; /* Починаємо з лівого краю */
+    width: 100%; /* Заповнюємо всю ширину */
+    background-color: #ff4500;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+}
+
+.movieCard button:hover {
+    background-color: #ff5722;
+    transform: scale(1.03);
+}
+
+
+.movieCard button:hover {
+    background-color: #ff5722;
+    transform: scale(1.05);
+}
+

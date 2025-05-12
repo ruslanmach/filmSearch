@@ -1,0 +1,21 @@
+.searchField {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 300px;
+}
+
+.searchInput {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 2px solid #ff4500;
+    background-color: #ffffff;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    font-size: 16px;
+}
+
+.searchInput:focus {
+    border-color: #ff5722;
+    box-shadow: 0px 4px 10px rgba(255, 69, 0, 0.5);
+}

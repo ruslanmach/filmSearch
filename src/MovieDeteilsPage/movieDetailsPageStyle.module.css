@@ -1,0 +1,73 @@
+.movieDetailsPage {
+    padding: 20px;
+    background-color: #121212; /* Темний фон */
+    color: white;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Центруємо контент */
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+/* Стилі для постера */
+.poster {
+    width: 280px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 20px rgba(255, 69, 0, 0.3); /* Світіння у стилі сайту */
+}
+
+/* Деталі фільму */
+.details {
+    max-width: 600px;
+}
+
+.title {
+    font-size: 28px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    color: #ff4500;
+    margin-bottom: 10px;
+}
+
+.overview {
+    font-size: 18px;
+    color: #b0b0b0;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.info {
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+/* Кнопка "Офіційний сайт" */
+.officialLink {
+    display: inline-block;
+    background-color: #ff4500;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.officialLink:hover {
+    background-color: #ff5722;
+    transform: scale(1.05);
+}
+
+/* Ефект завантаження */
+.loading {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 50px;
+    color: #ff4500;
+}

@@ -1,0 +1,88 @@
+.headerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Додає адаптивність */
+    padding: 15px 30px;
+    background-color: #1a1a1a;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    margin-bottom: 40px;
+    gap: 20px; /* Відступи між елементами */
+}
+
+.navlink {
+    padding: 10px 15px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 5px;
+}
+
+.navlink:hover {
+    background-color: #ff4500;
+    color: white;
+}
+
+/* Стилі кнопки "Favorites" */
+.favoritesButton {
+    background-color: #ff4500;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.favoritesButton:hover {
+    background-color: #ff5722;
+    transform: scale(1.05);
+}
+
+/* Красиве поле для пошуку */
+.searchField {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.searchField input {
+    width: 100%;
+    max-width: 300px;
+    padding: 12px;
+    border-radius: 8px;
+    border: 2px solid #ff4500;
+    background-color: #ffffff;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    font-size: 16px;
+}
+
+.searchField input:focus {
+    border-color: #ff5722;
+    box-shadow: 0px 4px 10px rgba(255, 69, 0, 0.5);
+}
+
+/* Відступи між header та картками */
+.moviesContainer {
+    margin-top: 30px; /* Додає гарний відступ */
+}
+
+/* Адаптивність для маленьких екранів */
+@media (max-width: 768px) {
+    .headerContainer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .searchField {
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .favoritesButton {
+        width: 100%;
+    }
+}

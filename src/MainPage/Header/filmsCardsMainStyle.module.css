@@ -1,0 +1,97 @@
+.sectionContainer {
+    padding: 20px;
+    border-radius: 10px;
+
+    margin-bottom: 40px; /* Гарний відступ між секціями */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header h2 {
+    color: white;
+    font-size: 22px;
+}
+
+.viewAllButton {
+    background-color: #ff4500;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.viewAllButton:hover {
+    background-color: #ff5722;
+    transform: scale(1.05);
+}
+
+.sectionContainer {
+    padding: 20px;
+    background-color: #121212;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    margin-bottom: 40px;
+}
+
+/* Контейнер заголовка */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Вирівнюємо по горизонталі */
+    width: 100%;
+}
+
+/* Градієнтна риска між заголовком та кнопкою */
+.gradientLine {
+    flex-grow: 1; /* Дозволяє рисці займати всю доступну ширину */
+    height: 4px;
+    background: linear-gradient(90deg, #ff0000, #ff4500, #ff8c00);
+    border-radius: 5px;
+    margin: 0 15px; /* Відступи між Films / Series і рискою */
+}
+
+/* Заголовки Films / Series */
+.header h2 {
+    color: white;
+    font-size: 22px;
+    text-transform: uppercase;
+}
+
+/* Кнопка View All */
+.viewAllButton {
+    background-color: #ff4500;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+}
+
+.viewAllButton:hover {
+    background-color: #ff5722;
+    transform: scale(1.05);
+}
+
+
+/* Адаптивність */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .viewAllButton {
+        margin-top: 10px;
+    }
+}

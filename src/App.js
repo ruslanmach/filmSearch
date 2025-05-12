@@ -1,24 +1,29 @@
-import logo from './logo.svg';
+import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import './App.css';
+import { Suspense, lazy } from 'react';
+
+
+const MainPage = lazy(() => import('./MainPage/mainPage'));
+const FilmPage = lazy(() => import('./FilmPage/filmPage'));
+const SeriesPage = lazy(() => import('./SeriesPage/seriesPage'));
+const SearchPage = lazy(() => import('./SearchPage/searchPage'));
+const MovieDetailsPage = lazy(() => import('./MovieDeteilsPage/movieDetailsPage'));
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+        <Suspense fallback={<div>Loading...</div>}>
+        <Routes>
+            <Route index element={<MainPage />} />
+            <Route path="/films" element={<FilmPage />} />
+            <Route path="/series" element={<SeriesPage />} />
+            <Route path="/search" element={<SearchPage />} />
+            <Route path="/:type/:id" element={<MovieDetailsPage />} />
+        </Routes>
+        </Suspense>
+    </BrowserRouter>
   );
 }
 
