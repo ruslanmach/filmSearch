@@ -3,6 +3,8 @@
     background-color: #121212; /* Темний фон */
     color: white;
     font-family: 'Arial', sans-serif;
+    /* Встановлюємо відступ знизу на мобільних */
+    padding-bottom: 50px;
 }
 
 /* Центруємо контент */
@@ -12,6 +14,9 @@
     justify-content: center;
     gap: 30px;
     margin-top: 20px;
+    /* Додаємо відступи з боків на мобільних */
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 /* Стилі для постера */
@@ -78,7 +83,7 @@
         align-items: center;
         text-align: center;
         gap: 20px;
-        padding-bottom: 50px;
+        padding-bottom: 50px; /* Відступ знизу для мобільних */
     }
 
     .poster {
@@ -101,7 +106,7 @@
 /* 🔻 Адаптація для мобільних телефонів */
 @media (max-width: 480px) {
     .content {
-        padding-bottom: 50px;
+        padding-bottom: 50px; /* Відступ знизу для мобільних */
     }
     .poster {
         width: 180px;
