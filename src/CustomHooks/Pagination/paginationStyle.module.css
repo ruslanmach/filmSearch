@@ -66,6 +66,8 @@
 @media (max-width: 400px) {
     .paginationContainer {
         padding-bottom: 50px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
     .paginationButton {
         padding: 6px 10px;
