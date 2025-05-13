@@ -78,6 +78,7 @@
         align-items: center;
         text-align: center;
         gap: 20px;
+        padding-bottom: 50px;
     }
 
     .poster {
@@ -99,6 +100,9 @@
 
 /* 🔻 Адаптація для мобільних телефонів */
 @media (max-width: 480px) {
+    .content {
+        padding-bottom: 50px;
+    }
     .poster {
         width: 180px;
     }
