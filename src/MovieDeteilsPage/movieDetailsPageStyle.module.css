@@ -71,3 +71,48 @@
     margin-top: 50px;
     color: #ff4500;
 }
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .poster {
+        width: 220px;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+
+    .overview {
+        font-size: 16px;
+    }
+
+    .info {
+        font-size: 15px;
+    }
+}
+
+/* 🔻 Адаптація для мобільних телефонів */
+@media (max-width: 480px) {
+    .poster {
+        width: 180px;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    .overview {
+        font-size: 15px;
+    }
+
+    .officialLink {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+}

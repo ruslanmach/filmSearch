@@ -25,7 +25,6 @@ const searchFilmByKeyWord = createAsyncThunk(
         try {
             const result = await mainApi.getFilms(keyWord, page);
 
-            // Не фільтруємо — вже точно серіали
             const movies = result.data.results.map(show => ({
                 id: show.id,
                 poster: show.poster_path,
